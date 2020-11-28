@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types'
 
-export const Login = ({ handleOnChange, email, password }) => {
+export const LoginForm = ({ handleOnChange, email, password }) => {
 	return (
 		<Container>
 			<Row>
@@ -43,4 +44,12 @@ export const Login = ({ handleOnChange, email, password }) => {
 	);
 };
 
-export default Login;
+LoginForm.propTypes = {
+	handleOnChange: PropTypes.func.isRequired,
+	email: PropTypes.string.isRequired,
+	password: PropTypes.string.isRequired,
+}
+
+export default LoginForm;
+
+//video 3; 38 mintutes
