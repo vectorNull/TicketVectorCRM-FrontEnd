@@ -13,7 +13,7 @@ jobs:
             - uses: oke-py/npm-audit-actions@v1.6.0
               with:
                     audit_level: moderate
-                    github_token: ${{ secret.GITHUB_TOKEN }}
+                    github_token: ${{ GITHUB_TOKEN }}
                     issue_assignees: oke-py
                     issue_labels: vulnerability, test
                     dedupe_issues: true
