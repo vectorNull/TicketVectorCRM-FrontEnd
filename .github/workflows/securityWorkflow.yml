@@ -6,6 +6,9 @@ jobs:
     scan:
         name: npm audit
         runs-on: ubuntu-20.04
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
         steps:
             - uses: actions/checkout@v2
             - name: install dependencies
@@ -13,7 +16,6 @@ jobs:
             - uses: oke-py/npm-audit-actions@v1.6.0
               with:
                     audit_level: moderate
-                    github_token: ${{ GITHUB_TOKEN }}
                     issue_assignees: oke-py
                     issue_labels: vulnerability, test
                     dedupe_issues: true
