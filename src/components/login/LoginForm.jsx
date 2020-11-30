@@ -52,4 +52,4 @@ LoginForm.propTypes = {
 
 export default LoginForm;
 
-//video 3; 38 mintutes
+//video 3; 46 mintutes
